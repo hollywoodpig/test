@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="media/css/land.css">
+	<link rel="stylesheet" href="media/css/libs/chartist-js.min.css">
+	<link rel="stylesheet" href="media/css/main.css">
+	<link rel="stylesheet" href="media/css/media.css">
+	<!-- link logo -->
+	<!-- link theme -->
+	<!-- link media if need -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<div class="left-side">
+		   <div class="hamurger"><i class="fas fa-bars"></i></div>
+		   <div class="sizer">
+			  <svg fill="#263238" id="max" viewBox="0 0 36 36">
+				 <g id="move1">
+					<path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
+				 </g>
+				 <g id="move2">
+					<path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
+				 </g>
+				 <g id="move3">
+					<path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
+				 </g>
+				 <g id="move4">
+					<path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
+				 </g>
+			  </svg>
+			  <svg fill="#263238" id="min" viewBox="0 0 36 36">
+				 <g id="move3">
+					<path class="ytp-svg-fill" d="m 14,14 -4,0 0,2 6,0 0,-6 -2,0 0,4 0,0 z" id="ytp-id-48"></path>
+				 </g>
+				 <g id="move4">
+					<path class="ytp-svg-fill" d="m 22,14 0,-4 -2,0 0,6 6,0 0,-2 -4,0 0,0 z" id="ytp-id-49"></path>
+				 </g>
+				 <g id="move1">
+					<path class="ytp-svg-fill" d="m 20,26 2,0 0,-4 4,0 0,-2 -6,0 0,6 0,0 z" id="ytp-id-50"></path>
+				 </g>
+				 <g id="move2">
+					<path class="ytp-svg-fill" d="m 10,22 4,0 0,4 2,0 0,-6 -6,0 0,2 0,0 z" id="ytp-id-51"></path>
+				 </g>
+			  </svg>
+		   </div>
+		   <div class="page-name animated bounceInLeft">Админ панель</div>
+		</div>
+
+		<div class="right-side">
+		   <div class="animated bounceInDown" id="time">00:00</div>
+		   <div class="form-hide">
+				<svg id="hidden-search" fill="#263238" viewBox="0 0 13 14" width="45%" height="45%">
+					<path d="M5.571 9.333c-2.048 0-3.714-1.674-3.714-3.733s1.666-3.733 3.714-3.733c2.049 0 3.715 1.674 3.715 3.733S7.62 9.333 5.57 9.333zm4.21-.077A5.582 5.582 0 0 0 11.144 5.6c0-3.088-2.499-5.6-5.572-5.6C2.5 0 0 2.512 0 5.6c0 3.088 2.499 5.6 5.571 5.6a5.503 5.503 0 0 0 2.777-.752L11.64 14 13 12.728 9.782 9.256z"></path>
+				</svg>
+		   </div>
+		   <div class="form-for-check">
+				<div class="close-form"><i class="fas fa-times"></i></div>
+				<form class="d-flex ml-1">
+				<input type="text" class="form-control" placeholder="Поиск по директориям...">
+				<button class="as">
+					<svg id="search" fill="#263238" viewBox="0 0 13 14" width="40%" height="40%"><path d="M5.571 9.333c-2.048 0-3.714-1.674-3.714-3.733s1.666-3.733 3.714-3.733c2.049 0 3.715 1.674 3.715 3.733S7.62 9.333 5.57 9.333zm4.21-.077A5.582 5.582 0 0 0 11.144 5.6c0-3.088-2.499-5.6-5.572-5.6C2.5 0 0 2.512 0 5.6c0 3.088 2.499 5.6 5.571 5.6a5.503 5.503 0 0 0 2.777-.752L11.64 14 13 12.728 9.782 9.256z"></path></svg>       
+				</button>          
+			  </form>
+		   </div>
+		   <a href="#" class="user-info">
+			  <div class="comlete_ava animated bounceInRight" style="background-image: url(https://pp.userapi.com/c847120/v847120320/70d59/mf1ivURkD_4.jpg);"></div>
+			  <!-- <div class="incoplete_ava"><i class="far fa-user"></i></div> -->
+			  <div class="nick-head animated bounceInUp">Dimon</div>
+		   </a>
+		</div>      
+	</header>
+
+	<main>
+		<div class="main-menu" style="background-image: url(media/img/menu/02.jpg); background-color: rgba(0, 0, 0, 0.8);">
+			<div class="logo-menu"></div>
+			<ul class="menu-templ">
+				<li><a href="#"><i class="far fa-newspaper"></i><span>Новости</span></a></li>
+				<li><a href="#"><i class="fas fa-puzzle-piece"></i><span>Админ панель</span></a></li>
+				<li><a href="#"><i class="fas fa-dna"></i><span>API док</span></a></li>
+				<li><a href="#"><i class="fas fa-crown"></i><span>Проект</span></a></li>
+				<li><a href="#"><i class="far fa-comments"></i><span>Сообщения</span></a></li>
+				<li><a href="#"><i class="fas fa-users"></i><span>Друзья</span></a></li>
+				<li><a href="#"><i class="fas fa-folder"></i><span>Хранилище</span></a></li>
+				<li><a href="#"><i class="fas fa-sliders-h"></i><span>Настройки</span></a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<div class="content-start">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl col-lg-6 col-sm-12 mb-4 f">
+							<div class="stat-block block-first">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col">
+											<div class="block-icon">
+												<i class="fas fa-users"></i>
+											</div>
+										</div>
+										<div class="col text-right">
+											<div class="block-text">
+												<div class="block-text-wrapper">
+													<div class="block-text-title">
+														Пользователи
+													</div>
+													<div class="block-text-count">
+														7.365
+													</div>                                                  
+												</div>
+												<div class="block-text-wtf">
+													1.354
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl col-lg-6 col-sm-12 mb-4 s">
+							<div class="stat-block block-second">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col">
+											<div class="block-icon">
+												<i class="fas fa-shopping-cart"></i>
+											</div>
+										</div>
+										<div class="col text-right">
+											<div class="block-text">
+												<div class="block-text-wrapper">
+													<div class="block-text-title">
+														Покупки
+													</div>
+													<div class="block-text-count">
+														2.950
+													</div>                                                  
+												</div>
+												<div class="block-text-wtf">
+													NULL
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>                              
+							</div>
+						</div>
+						<div class="col-xl col-lg-6 col-sm-12 mb-4 t">
+							<div class="stat-block block-third">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col">
+											<div class="block-icon">
+												<i class="fas fa-dollar-sign"></i>
+											</div>
+										</div>
+										<div class="col text-right">
+											<div class="block-text">
+												<div class="block-text-wrapper">
+													<div class="block-text-title">
+														Общий доход
+													</div>
+													<div class="block-text-count">
+														7.365
+													</div>                                                  
+												</div>
+												<div class="block-text-wtf">
+													8.534
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl col-lg-6 col-sm-12 mb-4 f4">
+							<div class="stat-block block-fourth">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col">
+											<div class="block-icon">
+												<i class="far fa-eye"></i>
+											</div>
+										</div>
+										<div class="col text-right">
+											<div class="block-text">
+												<div class="block-text-wrapper">
+													<div class="block-text-title">
+														Просмотры
+													</div>
+													<div class="block-text-count">
+														7.365
+													</div>                                                  
+												</div>
+												<div class="block-text-wtf">
+													84.534
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-4">
+						<div class="col">
+							<div class="miner-stats-wrapper">
+								<div class="container-fluid">
+									<div class="row d-flex justify-content-center align-items-center text-center">
+										<div class="col-xl col-lg-6 mt-3 d-lg-none d-xl-flex justify-content-center align-items-center">
+											<h4 class="display-8 animated bounce">QSAVE.IO</h4>
+											<hr class="d-sm-block d-lg-none">
+										</div>
+										<div class="col-xl col-lg-6 mt-3">
+											<div class="miner-stat">
+												<h3>Hashes/S:</h3>
+												<span>22</span>
+												<div class="progress mt-3">
+													<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>                                                
+											</div>
+										</div>
+										<div class="col-xl col-lg-6 mt-3">
+											<div class="miner-stat">
+												<h3>Total Hashes:</h3>
+												<span>324.61K</span>
+												<div class="progress mt-3">
+													<div class="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>                                                 
+											</div>
+										</div>
+										<div class="col-xl col-lg-6 mt-3">
+											<div class="miner-stat">
+												<h3>Total Paid:</h3>
+												<span>0</span>&nbsp<span class="xmr">XMR</span>
+												<div class="progress mt-3">
+													<div class="progress-bar" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>   
+											</div>
+										</div>
+										<div class="col-xl col-lg-6 mt-3">
+											<div class="miner-stat">
+												<h3>Total XMR:</h3>
+												<span>0.00002</span>&nbsp<span class="xmr">XMR</span>
+												<div class="progress mt-3">
+													<div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>                                                   
+											</div>
+										</div>
+										<div class="col-xl col-lg-12 mt-3">
+											<div class="miner-stat">
+												<h3>Online:</h3>
+												<span>228</span>
+												<div class="progress mt-3">
+													<div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>   
+											</div>
+										</div>
+										<div class="col-xl col-lg-6 mt-3">
+											<button class="btn btn-lg btn-primary animated rubberBand">Вывести деньги</button>
+										</div>                                                                          
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-7 col-lg-6 mb-4">
+							<div class="latest-posts-wrapper">
+								<div class="latest-posts">
+									<h1 class="add-post-title mb-4 mt-4 ml-3 animated fadeInLeft fast">Последние посты:</h1>
+									<table class="table table-striped text-center mytable">
+									  <thead>
+										<tr>
+										  <th style="border-bottom: 0; border-top: 0;" scope="col">ID</th>
+										  <th style="border-bottom: 0; border-top: 0;" scope="col">Тема</th>
+										  <th style="border-bottom: 0; border-top: 0;" scope="col">Просмотры</th>
+										  <th style="border-bottom: 0; border-top: 0;" scope="col">Дата</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <td scope="row">1</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">2</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">3</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">4</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">5</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">6</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">7</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">8</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">9</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>
+										<tr>
+										  <td scope="row">10</th>
+										  <td>Миша</td>
+										  <td>Приёмный</td>
+										  <td>21.11.03</td>
+										</tr>                                                                                                                       
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-5 col-lg-6 mb-4">
+							<div class="add-post-wrapper pt-2 pb-2">
+								<div class="add-post mt-3 mb-3">
+									<div class="container-fluid">
+										<form action="">
+											<div class="row">
+												<div class="col-xl col-sm-12">
+													<h1 class="add-post-title mb-3 animated fadeInRight fast">Добавить пост:</h1>
+													<input type="text" class="form-control mb-4 add-post-theme-input animated zoomIn faster" placeholder="Тема поста:">
+													<textarea rows="10" class="form-control add-post-textarea mb-2 animated zoomIn faster" placeholder="Краткое описание события:"></textarea>
+													<div class="add-post-symbols mb-2">
+														<span>0</span><span>/</span><span>210</span><span> символов</span>
+													</div>
+												</div>
+												<div class="col-xl col-sm-12 d-flex justify-content-center">        
+													<div id="same-file" class="wrap-final text-center"> 
+													   <label for="preview" class="label"><p>Выберите файлы</p></label> 
+													   <input type="file" class="my" id="preview" name="preview" multiple> 
+													</div>                                                  
+												</div>
+											</div>
+											<div class="row">
+												<div class="col d-flex justify-content-center">
+													<button type="button" class="btn btn-lg add-post-load-btn">Загрузить</button>
+												</div>
+											</div>                                      
+										</form>
+									</div>
+								</div>                              
+							</div>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-lg-4">
+							<div class="chart-wrapper">
+								<div class="chart-title pb-4 pt-3 pl-3">
+									Стата
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="empty-block-wrapper">
+								<h1 class="empty-block-title pb-4 pt-3 pl-3">
+									Пустой блок
+								</h1>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col mt-4">
+							<div class="users-table-wrapper">
+								<h1 class="users-table-title pb-4 pt-3 pl-3">
+									Таблица пользователей
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer d-flex justify-content-center align-items-center">
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-xl-6 col-md-12">
+					<div class="footer-quote">
+						All rights reserved by Qsave.
+					</div>
+				</div>
+				<div class="col-xl-6 col-md-12">
+					<div class="footer-quote">
+						Manage and Develop by Qsave.
+					</div>
+				</div>                
+			</div>
+		</div>
+	</footer>
+
+	<script src="media/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+	<script src="media/js/libs/fullscreen.min.js"></script>
+	<script src="media/js/main.js"></script>
+</body>
+</html>

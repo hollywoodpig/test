@@ -1,0 +1,272 @@
+/*bootstrap sizes media*/
+
+/*это я добавил :)*/
+@media (min-width: 0px) {
+	.footer {
+		margin-top: 8rem;
+	}
+
+	.footer-quote {
+		margin-top: 1rem;
+	}
+
+	.chart-wrapper {
+		margin-bottom: 1.5rem;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+	.wrap-final {
+		top: 9px;
+	}
+
+	.label {
+		padding-top: 10px; 
+		padding-bottom: 8px;
+	}
+
+	.miner-stat {
+		margin-bottom: 2rem;
+	}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+	.wrap-final {
+		top: 9px;
+	}
+
+	.label {
+		padding-top: 10px; 
+		padding-bottom: 10px;
+	}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.footer {
+		margin-top: 4rem;
+	}
+
+	.chart-wrapper {
+		margin-bottom: 0rem;
+	}	
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+	.block-text-title {
+		font-size: 22px;
+	}
+
+	.wrap-final {
+		top: 46px;
+	}
+
+	.miner-stat {
+		margin-bottom: 0rem;
+	}
+
+	.footer-quote {
+		margin-bottom: 0rem;
+	}	
+}
+
+/*other media quieres*/
+
+@media (max-width: 1540px) {  
+	.block-text-title {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1416px) {
+	.block-text-title {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1404px) {
+	.add-post-title {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 1354px) {
+	.block-text-title {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1230px) {
+	.block-text-title {
+		font-size: 12px;
+	}
+}
+
+@media  (max-width: 1198px) {
+	.block-text-title {
+		font-size: 22px;
+	}
+
+	.add-post-load-btn {
+		top: 35px;
+	}
+
+	.label p {
+		-webkit-transform: translateY(8px);
+		    -ms-transform: translateY(8px);
+		        transform: translateY(8px);
+	}	
+}
+
+@media (max-width: 991px) {
+	.miner-stats-wrapper {
+		padding-top: 2rem;
+	}	
+}
+
+@media (max-width: 575px) {  
+	.add-post-load-btn {
+		top: 35px;
+	}
+
+	.wrap-final {
+		top: 15px;
+	}
+
+	.label p {
+		-webkit-transform: translateY(18px);
+		    -ms-transform: translateY(18px);
+		        transform: translateY(18px);
+	}
+
+	.miner-stats-wrapper {
+		padding-top: 0rem;
+	}
+
+	.first {
+		margin-bottom: 1rem;
+	}	
+}
+
+/*dimen media quieres*/
+
+@media screen and (max-width: 1300px) {
+	.content-start{
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	#time{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.left-side{
+		margin-left: 10px;
+	}
+	.right-side{
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.sizer{
+		display: none;
+	}
+	.hamurger{
+		display: block;
+	}
+	header{
+		padding: 0;
+	}
+	.main-content{
+		padding-left: 0;
+	}
+	/*HERE A HAMB MENU*/
+	.main-menu{
+		width: 280px;
+		-webkit-transform: translateX(-280px);
+		    -ms-transform: translateX(-280px);
+		        transform: translateX(-280px);
+		-webkit-transition: .2s ease;
+		-o-transition: .2s ease;
+		transition: .2s ease;
+	}
+	.logo-menu{
+		background-position: 20% center;
+		background-size: 60%;
+	}
+	.menu-templ{
+		text-align: center;
+		width: 250px;
+	}
+	.menu-templ li{
+		width: 100%;
+	}
+	.menu-templ li a{
+		padding-left: 18px;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+	}
+	.menu-templ li a i{
+		margin-right: 10px;
+	}
+	.menu-templ li a span{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.form-for-check{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		z-index: 999;
+		height: 100vh;
+		width: 100%;
+		background-color: rgba(0, 0, 0, .95);
+		overflow: hidden;
+		display: none;
+		/*transition: .2s ease;*/
+		padding-top: 550px;
+	}
+	.form-for-check form{
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.form-for-check .as {
+		background: transparent;
+	}
+
+	#search {
+		fill: #fff;
+	}
+
+	.close-form{
+		display: block;
+	}
+	#hidden-search{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content-start{
+		margin: 13px;
+	}
+}
